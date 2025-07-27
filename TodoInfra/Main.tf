@@ -37,7 +37,7 @@ module "virtual_network" {
   vnet_name =  "TodoVNet"
   resource_group_name     = "TodoInfraRG"
   location                = "East US"
-  address_space           = ["10.0.0.1/16"]
+  address_space           = ["10.0.0.0/16"]
 }
 module "fsubnet" {
   depends_on = [ module.virtual_network ]
